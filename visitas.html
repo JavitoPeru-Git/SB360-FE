@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBuilding360 - Accesos y Visitas</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Librería para generar el código QR visualmente -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>SmartBuilding360</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="pagos.html">Pagos</a>
+      <a href="visitas.html">Visitas</a>
+      <a href="reservas.html">Reservas</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Pre-autorización de Visitas y Pases QR</h2>
+    <div id="user-info"></div>
+
+    <div class="card">
+      <h3>Generar Pase de Visita</h3>
+      <form id="visita-form">
+        <label>Nombre del Visitante:</label>
+        <input type="text" id="nombre-visitante" required style="width:100%; padding: 8px; margin-bottom:10px;">
+
+        <label>DNI / Doc. Identidad:</label>
+        <input type="text" id="dni-visitante" required style="width:100%; padding: 8px; margin-bottom:10px;">
+
+        <label>Fecha de Visita:</label>
+        <input type="date" id="fecha-visita" required style="width:100%; padding: 8px; margin-bottom:10px;">
+
+        <button type="submit" class="btn btn-success" style="width:100%;">Generar Código QR</button>
+      </form>
+    </div>
+
+    <!-- Contenedor donde se mostrará el QR generado -->
+    <div id="resultado-qr" class="card" style="display:none; text-align:center;">
+      <h3>Pase Autorizado</h3>
+      <p>Muestra o envía este código QR a tu visita para presentarlo en portería:</p>
+      <div id="qrcode" style="display:inline-block; margin: 15px;"></div>
+      <p><strong>Código de Acceso:</strong> <span id="codigo-texto"></span></p>
+    </div>
+  </div>
+
+  <script src="js/visitas.js"></script>
+</body>
+</html>

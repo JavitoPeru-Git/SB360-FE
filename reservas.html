@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBuilding360 - Reserva de Áreas Comunes</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>SmartBuilding360</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="pagos.html">Pagos</a>
+      <a href="visitas.html">Visitas</a>
+      <a href="reservas.html">Reservas</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Reserva y Alquiler de Áreas Comunes</h2>
+    <div id="user-info"></div>
+
+    <div class="card">
+      <h3>Solicitud de Reserva</h3>
+      <form id="reserva-form">
+        <label>Área Común:</label>
+        <select id="area-comun" style="width:100%; padding: 8px; margin-bottom:10px;">
+          <option value="Salón de Eventos">Salón de Eventos</option>
+          <option value="Zona de Parrillas">Zona de Parrillas</option>
+          <option value="Terraza Principal">Terraza Principal</option>
+        </select>
+
+        <label>Fecha del Evento:</label>
+        <input type="date" id="fecha-reserva" required style="width:100%; padding: 8px; margin-bottom:10px;">
+
+        <label>Cantidad de Horas:</label>
+        <input type="number" id="horas-reserva" min="1" max="12" value="2" required onchange="calcularTotal()" style="width:100%; padding: 8px; margin-bottom:10px;">
+
+        <div class="card" style="background-color: #f1f1f1;">
+          <p>Tarifa por hora: <strong>S/ 100.00</strong></p>
+          <p>Garantía reembolsable: <strong>S/ 200.00</strong></p>
+          <h4>Monto Total Calculado: S/ <span id="monto-calculado">400.00</span></h4>
+        </div>
+
+        <button type="submit" class="btn btn-success" style="width:100%;">Confirmar y Reservar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/reservas.js"></script>
+</body>
+</html>

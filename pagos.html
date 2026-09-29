@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SmartBuilding360 - Pagos en Línea</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Estado de Cuenta y Pago de Mantenimiento</h2>
+    <div id="user-info"></div>
+
+    <h3>Recibos Pendientes</h3>
+    <div id="lista-recibos"></div>
+
+    <h4>Monto Total a Pagar: S/ <span id="monto-total">0.00</span></h4>
+
+    <h3>Método de Pago</h3>
+    <select id="metodo-pago" style="padding: 8px; width: 100%; margin-bottom: 10px;">
+      <option value="tarjeta">Tarjeta de Crédito / Débito (Niubiz / Visa)</option>
+      <option value="yape">Billetera Digital (Yape / Plin)</option>
+      <option value="debito_automatico">Débito Automático (Pago Recurrente)</option>
+    </select>
+
+    <button id="btn-pagar" class="btn btn-success" onclick="procesarPago()">Pagar en Línea</button>
+  </div>
+
+  <script src="js/pagos.js"></script>
+</body>
+</html>

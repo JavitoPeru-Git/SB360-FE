@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBuilding360 - Login</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container" style="max-width: 400px;">
+    <h2>Iniciar Sesión</h2>
+    <form id="login-form">
+      <label>Correo Electrónico o Usuario:</label>
+      <input type="email" id="email" required style="width:100%; padding: 8px; margin-bottom:10px;">
+      
+      <label>Contraseña:</label>
+      <div style="display:flex;">
+        <input type="password" id="password" required style="width:100%; padding: 8px;">
+        <button type="button" onclick="togglePassword()">👁️</button>
+      </div>
+
+      <div style="margin: 10px 0;">
+        <input type="checkbox" id="remember"> <label for="remember">Recordarme</label>
+      </div>
+
+      <button type="submit" class="btn" style="width: 100%;">Acceder</button>
+      <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+    </form>
+    <div id="login-msg" style="color: red; margin-top: 10px;"></div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
